@@ -46,3 +46,11 @@ func (s *userService) Login(email, password string) (model.User, error) {
 
 	return user, nil
 }
+
+func ToUserModel(name, email, password string) model.User {
+	return model.User{
+		Name:     name,
+		Email:    email,
+		Password: password,
+	}
+}
