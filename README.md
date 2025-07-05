@@ -27,26 +27,6 @@ A simple, clean, and scalable RESTful API for managing tasks — built with **Go
 
 ---
 
-## 📁 Project Structure
-task-manager/
-│
-├── cmd/ # App entry point
-├── config/ # Config loader (.env)
-├── internal/
-│ ├── model/ # Domain models
-│ ├── repository/ # Database access layer
-│ ├── service/ # Business logic
-│ └── handler/ # HTTP handlers (controllers)
-├── migrations/ # SQL schema files
-├── pkg/ # Shared packages (DB, etc.)
-│
-├── .env.example # Sample environment file
-├── go.mod / go.sum # Go modules
-└── README.md # This file
-
-
----
-
 ## ⚙️ Getting Started
 
 ### 1. Clone the repository
