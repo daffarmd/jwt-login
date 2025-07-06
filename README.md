@@ -1,3 +1,5 @@
+# Yang sudah done adalah jwt auth nya!! (JWT AUTH)
+# Yang belum adalah CRUD saja untuk TASK - MANAGER
 # task-manager
 # 📝 Task Manager API
 
