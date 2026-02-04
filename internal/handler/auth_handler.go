@@ -46,7 +46,7 @@ func (h *AuthHandler) Login(c *fiber.Ctx) error {
 		return c.Status(401).JSON(fiber.Map{"error": "invalid credentials"})
 	}
 
-	token, err := jwtutil.GenerateToken(user.ID)
+	token, err := jwtutil.GenerateToken(user.ID, user.Name)
 	if err != nil {
 		return c.Status(500).JSON(fiber.Map{"error": "could not generate token"})
 	}
