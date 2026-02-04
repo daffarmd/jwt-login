@@ -41,7 +41,8 @@ func main() {
 
 	app.Get("/me", middleware.JWTProtected(), func(c *fiber.Ctx) error {
 		userID := c.Locals("user_id")
-		return c.JSON(fiber.Map{"user_id": userID})
+		name := c.Locals("name")
+		return c.JSON(fiber.Map{"user_id": userID, "name": name})
 	})
 
 	app.Listen(":8080")

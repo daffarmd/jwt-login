@@ -15,7 +15,8 @@ func JWTProtected() fiber.Handler {
 		}
 
 		token := auth[7:]
-		userID, err := jwtutil.ParseToken(token)
+
+		userID, name, err := jwtutil.ParseToken(token)
 		if err != nil {
 			return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
 				"error": "invalid token",
@@ -23,6 +24,7 @@ func JWTProtected() fiber.Handler {
 		}
 
 		c.Locals("user_id", userID)
+		c.Locals("name", name)
 		return c.Next()
 	}
 }
